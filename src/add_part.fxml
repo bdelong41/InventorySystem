@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="add_partController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="500.0" prefWidth="545.0">
+         <children>
+            <Label fx:id="machineIdLabel" layoutX="36.0" layoutY="242.0" text="Machine ID" />
+            <Label layoutX="38.0" layoutY="219.0" text="Max" />
+            <Label layoutX="38.0" layoutY="185.0" text="Price/cost" />
+            <Label layoutX="38.0" layoutY="152.0" text="Inv" />
+            <Label layoutX="38.0" layoutY="113.0" text="Name" />
+            <Label layoutX="38.0" layoutY="76.0" text="ID" />
+            <TextField fx:id="machineidTextfield" layoutX="135.0" layoutY="238.0" />
+            <TextField fx:id="maxTextfield" layoutX="113.0" layoutY="207.0" />
+            <TextField fx:id="priceTextField" layoutX="113.0" layoutY="173.0" />
+            <TextField fx:id="invTextField" layoutX="113.0" layoutY="140.0" />
+            <TextField fx:id="nameTextField" layoutX="113.0" layoutY="109.0" />
+            <TextField fx:id="idTextfield" layoutX="113.0" layoutY="72.0" />
+            <Label layoutX="284.0" layoutY="211.0" text="Min" />
+            <TextField fx:id="minTextField" layoutX="320.0" layoutY="207.0" />
+             <Label layoutX="66.0" layoutY="46.0" text="Add Part" />
+             <RadioButton fx:id="inHouseRadioButton" layoutX="128.0" layoutY="46.0" mnemonicParsing="false" onAction="#radio_button_listener" text="In-House">
+                 <toggleGroup>
+                     <ToggleGroup fx:id="add_part_group" />
+                 </toggleGroup>
+             </RadioButton>
+             <RadioButton fx:id="outsourcedRadioButton" layoutX="253.0" layoutY="46.0" mnemonicParsing="false" onAction="#radio_button_listener" text="Outsourced" toggleGroup="$add_part_group" />
+            <Button fx:id="AddPart_Save_Button" layoutX="336.0" layoutY="322.0" mnemonicParsing="false" onAction="#save_button_listener" text="Save" />
+            <Button fx:id="addPartCancelButton" layoutX="394.0" layoutY="322.0" mnemonicParsing="false" onAction="#Cancel_ButtonListener" text="Cancel" />
+            <TextField fx:id="companyNameTextField" layoutX="135.0" layoutY="238.0" />
+            <Label fx:id="companyNameLabel" layoutX="38.0" layoutY="242.0" prefHeight="17.0" prefWidth="90.0" text="CompanyName" />
+         </children></AnchorPane>
+
+    </children>
+</GridPane>

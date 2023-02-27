@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="490.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddProduct">
+    <children>
+        <AnchorPane prefHeight="490.0" prefWidth="978.0">
+            <children>
+                <Label layoutX="36.0" layoutY="144.0" text="Inv" />
+                <Label layoutX="38.0" layoutY="219.0" text="Max" />
+                <Label layoutX="39.0" layoutY="76.0" text="id" />
+                <Label layoutX="38.0" layoutY="185.0" text="Price/cost" />
+                <Label layoutX="36.0" layoutY="113.0" text="Name" />
+                <Label layoutX="218.0" layoutY="211.0" text="Min" />
+                <TextField fx:id="minTextField" layoutX="262.0" layoutY="207.0" prefHeight="25.0" prefWidth="76.0" />
+                <TextField fx:id="maxTextField" layoutX="113.0" layoutY="207.0" prefHeight="25.0" prefWidth="76.0" />
+                <TextField fx:id="priceTextField" layoutX="113.0" layoutY="173.0" prefHeight="25.0" prefWidth="76.0" />
+                <TextField fx:id="invTextField" layoutX="113.0" layoutY="140.0" prefHeight="25.0" prefWidth="76.0" />
+                <TextField fx:id="nameTextField" layoutX="113.0" layoutY="109.0" prefHeight="25.0" prefWidth="149.0" />
+                <TextField fx:id="idTextField" layoutX="113.0" layoutY="72.0" prefHeight="25.0" prefWidth="149.0" />
+                <Button fx:id="saveProductButton" layoutX="702.0" layoutY="445.0" mnemonicParsing="false" onAction="#save_button_listener" text="Save" />
+                <Button fx:id="cancelProductButton" layoutX="788.0" layoutY="445.0" mnemonicParsing="false" onAction="#Cancel_ButtonListener" text="Cancel" />
+            <Button fx:id="Remove_Assoc_Button" layoutX="696.0" layoutY="411.0" mnemonicParsing="false" onAction="#remove_assoc_button_listener" text="Remove Associated Part" />
+            <Button fx:id="add_assoc_product_Button" layoutX="795.0" layoutY="216.0" mnemonicParsing="false" onAction="#add_button_listener" text="Add" />
+            <TextField fx:id="searchTextField" layoutX="681.0" layoutY="14.0" onKeyTyped="#checkPartsTable" prefHeight="25.0" prefWidth="156.0" promptText="Search by Part ID or Name" />
+            <TableView fx:id="partDataTableView" layoutX="488.0" layoutY="50.0" prefHeight="160.0" prefWidth="385.0">
+              <columns>
+                <TableColumn fx:id="partDataIdTableColumn" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="partDataNameTableColumn" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="partDataInvTableColumn" prefWidth="107.0" text="Inventory Level" />
+                  <TableColumn fx:id="partDataPriceTableColumn" prefWidth="130.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <TableView fx:id="associatedPartDataTableView" layoutX="488.0" layoutY="245.0" prefHeight="160.0" prefWidth="385.0">
+              <columns>
+                <TableColumn fx:id="assocPartsIdTableColumn" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="assocPartsNameTableColumn" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="assocPartsInvTableColumn" prefWidth="109.0" text="Inventory Level" />
+                  <TableColumn fx:id="assocPartsPriceTableColumn" prefWidth="125.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            </children></AnchorPane>
+    </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>

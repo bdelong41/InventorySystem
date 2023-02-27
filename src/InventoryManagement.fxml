@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InventoryManagement">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane fx:id="A_Anchor" prefHeight="394.0" prefWidth="984.0">
+         <children>
+             <Pane layoutX="39.0" layoutY="79.0" prefHeight="250.0" prefWidth="400.0" style="-fx-border-color: black;">
+                 <children>
+                     <TableView fx:id="part_tableView" layoutX="7.0" layoutY="37.0" prefHeight="160.0" prefWidth="386.0">
+                         <columns>
+                             <TableColumn fx:id="part_partID_tableColumn" prefWidth="75.0" text="Part ID" />
+                             <TableColumn fx:id="part_partName_tableColumn" prefWidth="75.0" text="Part Name" />
+                             <TableColumn fx:id="part_inventoryLevel_tableColumn" prefWidth="109.0" text="Inventory Level" />
+                             <TableColumn fx:id="part_priceCost_tableColumn" prefWidth="125.0" text="Price/Cost per Unit" />
+                         </columns>
+                     </TableView>
+                     <Label layoutX="33.0" layoutY="14.0" text="Parts" />
+                     <TextField fx:id="part_search_textarea" layoutX="227.0" layoutY="10.0" onKeyTyped="#checkPartsTable" promptText="Search By Product ID or Name" />
+                     <Button fx:id="part_modify_button" layoutX="248.0" layoutY="211.0" mnemonicParsing="false" onAction="#part_modify_button_listener" text="Modify" />
+                     <Button fx:id="part_delete_button" layoutX="324.0" layoutY="211.0" mnemonicParsing="false" onAction="#part_delete_button_listener" text="Delete" />
+                     <Button fx:id="part_add_button" layoutX="200.0" layoutY="211.0" mnemonicParsing="false" onAction="#part_add_button_listener" text="Add" />
+                 </children>
+             </Pane>
+
+            <Pane layoutX="528.0" layoutY="79.0" prefHeight="250.0" prefWidth="400.0" style="-fx-border-color: black;">
+               <children>
+                   <TableView fx:id="product_tableView" layoutX="7.0" layoutY="37.0" prefHeight="160.0" prefWidth="386.0">
+                       <columns>
+                           <TableColumn fx:id="product_productID_tableColumn" prefWidth="75.0" text="Product ID" />
+                           <TableColumn fx:id="product_productName_tableColumn" prefWidth="75.0" text="Product Name" />
+                           <TableColumn fx:id="product_inventoryLevel_tableColumn" prefWidth="109.0" text="Inventory Level" />
+                           <TableColumn fx:id="product_priceCost_tableColumn" prefWidth="125.0" text="Price/Cost per Unit" />
+                       </columns>
+                   </TableView>
+                  <Label layoutX="33.0" layoutY="14.0" text="Products" />
+                  <TextField fx:id="product_search_textarea" layoutX="227.0" layoutY="10.0" onKeyTyped="#checkProductsTable" promptText="Search By Product ID or Name" />
+                  <Button fx:id="product_modify_button" layoutX="248.0" layoutY="211.0" mnemonicParsing="false" onAction="#product_modify_button_listener" text="Modify" />
+                  <Button fx:id="product_delete_button" layoutX="324.0" layoutY="211.0" mnemonicParsing="false" onAction="#product_delete_button_listener" text="Delete" />
+                  <Button fx:id="product_add_button" layoutX="200.0" layoutY="211.0" mnemonicParsing="false" onAction="#product_add_button_listener" text="Add" />
+               </children>
+            </Pane>
+            <Label layoutX="39.0" layoutY="41.0" style="-fx-font-weight: bold;" text="Inventory Management System" />
+            <Button fx:id="exitButton" layoutX="876.0" layoutY="346.0" mnemonicParsing="false" onAction="#exit" text="exit" />
+         </children></AnchorPane>
+    </children>
+</GridPane>

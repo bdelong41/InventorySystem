@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="150.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ErrorDialogueBox">
+   <children>
+      <Label fx:id="errorMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="50.0" prefHeight="34.0" prefWidth="222.0" text="Error Message" />
+      <Button fx:id="okButton" layoutX="159.0" layoutY="101.0" mnemonicParsing="false" onAction="#Ok_button_listener" text="OK" />
+   </children>
+</AnchorPane>
